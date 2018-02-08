@@ -1,0 +1,137 @@
+
+<div class="container-fluid" style="margin-left:350px;margin-top:100px">
+<form [formGroup]="subScriptionForm">
+  <!--First row-->
+  <div class="row">
+      <!--First column-->
+      <div class="col-md-3">
+        <div class="md-form">
+            <input mdbActive type="text" formControlName="firstName" id="form41" class="form-control">
+            <label for="form41" class="">Name</label>
+            <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">
+                <div *ngIf="firstName.errors.required" >
+                  FirstName is required.
+                </div>
+    
+    
+                <div *ngIf="firstName.errors.pattern && !firstName.errors.required" >
+                  Only alphabets allowed
+                </div>
+              </div>
+        </div>
+        
+    </div>
+ 
+      <!--Second column-->
+      <div class="col-md-3">
+        <div class="md-form">
+            <input mdbActive type="text" id="form41" formControlName="surName" class="form-control">
+            <label for="form41" class="">SurName</label>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+      <div class="md-form">
+          <input mdbActive type="text" id="form41" class="form-control">
+          <label for="form41" class="">EmailAddress</label>
+      </div>
+  </div>
+  <div class="col-md-3">
+    <div class="md-form">
+        <input mdbActive type="text" id="form41" class="form-control">
+        <label for="form41" class="">Confirm EmailAddress</label>
+    </div>
+</div>
+  </div>
+  <!--/.First row-->
+
+  <div class="row">
+    <!--First column-->
+    <div class="col-md-3">
+      <div class="form-group">
+        <input mdbDeepDirective name="group1" type="radio" id="radio1">
+        <label for="radio1">Male</label>
+      </div>
+     </div>
+     <div class="col-md-3">
+      <div class="form-group">
+        <input mdbDeepDirective name="group1" type="radio" id="radio2">
+        <label for="radio2">Female</label>
+      </div>
+  </div>
+  </div>
+
+  <div class="row">
+    <!--Second column-->
+    <div class="col-md-3">
+      <div class="dropdown" dropdown>
+
+        <!--Trigger-->
+        <button dropdownToggle class="btn btn-primary dropdown-toggle waves-light" type="button" mdbRippleRadius>
+            Country
+        </button>
+    
+        <!--Menu-->
+        <div class="dropdown-menu dropdown-primary">
+            <a class="dropdown-item" href="#">India</a>
+            <a class="dropdown-item" href="#">Unites States</a>
+            <a class="dropdown-item" href="#">Britan</a>
+            <a class="dropdown-item" href="#">Australia</a>
+        </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="md-form">
+        <input mdbActive type="text" id="form41" class="form-control">
+        <label for="form41" class="">CompanyName</label>
+    </div>
+</div>
+
+</div>
+
+<div class="row">
+  <!--First column-->
+  <div class="col-md-3">
+    <div class="md-form">
+        <input mdbActive type="text" id="form41" class="form-control">
+        <label for="form41" class="">Industry</label>
+    </div>
+</div>
+
+  <!--Second column-->
+  <div class="col-md-3">
+    <div class="md-form">
+        <input mdbActive type="text" id="form41" class="form-control">
+        <label for="form41" class="">About You</label>
+    </div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3">
+  <div class="form-group">
+    <input mdbDeepDirective type="checkbox" class="filled-in" id="checkbox2">
+    <label for="checkbox2">Newsletter Opt in</label>
+</div>
+</div>
+<div class="col-md-3">
+  <div class="form-group">
+    <input mdbDeepDirective type="checkbox" class="filled-in" id="checkbox2">
+    <label for="checkbox2">Privacy Opt in</label>
+</div>
+</div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+    <div class="form-group">
+        <input mdbDeepDirective type="checkbox" class="filled-in" id="checkbox3">
+        <label for="checkbox2">Agree to terms and conditions</label>
+    </div>
+    </div>
+  </div>
+  <div class="row">
+      <button type="button" class="btn btn-primary btn-sm waves-light" mdbRippleRadius>Submit</button>
+  </div>
+</form>
+</div>
